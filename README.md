@@ -1,3 +1,6 @@
+![GitHub language](https://img.shields.io/badge/language-Java-orange)
+
+
 # Projeto de Cadastro de Alunos - Curso de ADS
 
 Este é um projeto Android Studio em Java para o cadastro de alunos do curso de Análise e Desenvolvimento de Sistemas (ADS)
@@ -40,10 +43,6 @@ Contribuições são bem-vindas! Se você deseja contribuir para o projeto, siga
 3. Faça as alterações desejadas e faça commit delas: `git commit -m 'Adicionar minha feature'`.
 4. Envie as alterações para o seu fork: `git push origin minha-feature`.
 5. Crie uma solicitação pull para este repositório.
-
-## Licença
-
-Este projeto é licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
 
 ## Contato
 
