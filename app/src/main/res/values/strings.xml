@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MeuCadastroDeAlunosADS</string>
+    <string name="login_hint_user">Digite seu usuário</string>
+    <string name="login_hint_password">Digite seu senha</string>
+    <string name="login_btn_login">Entrar</string>
+    <string name="login_txt_not_has_account_yet">Ainda não tem uma conta?</string>
+    <string name="login_txt_create_new_account">Cadastre-se aqui</string>
+    <string name="login_logo_description">logotipo com as letras ADS</string>
+    <string name="login_txt_fields_can_not_empty">Por favor, preencha todos os campos corretamente!</string>
+    <string name="login_txt_user_or_password_incorrets">usuário e/ou senha incorretos</string>
+</resources>
