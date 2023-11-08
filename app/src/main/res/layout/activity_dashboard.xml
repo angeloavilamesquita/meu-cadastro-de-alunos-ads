@@ -7,10 +7,14 @@
     android:orientation="vertical"
     tools:context=".DashboardActivity">
 
-    <TextView
-        android:id="@+id/dashboard_title"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/new_account_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dashboard" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="@string/dashboar_students_list"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 </LinearLayout>

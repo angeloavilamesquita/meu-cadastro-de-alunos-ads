@@ -8,4 +8,6 @@
     <string name="login_logo_description">logotipo com as letras ADS</string>
     <string name="login_txt_fields_can_not_empty">Por favor, preencha todos os campos corretamente!</string>
     <string name="login_txt_user_or_password_incorrets">usuário e/ou senha incorretos</string>
+    <string name="new_account_title">Nova conta</string>
+    <string name="dashboar_students_list">Lista de Alunos</string>
 </resources>
