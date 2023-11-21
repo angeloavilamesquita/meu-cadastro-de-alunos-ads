@@ -1,8 +1,10 @@
-package br.edu.unis.meucadastrodealunosads;
+package br.edu.unis.meucadastrodealunosads.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import br.edu.unis.meucadastrodealunosads.R;
 
 public class DashboardActivity extends AppCompatActivity {
 

@@ -13,13 +13,13 @@
         android:theme="@style/Theme.MeuCadastroDeAlunosADS"
         tools:targetApi="31">
         <activity
-            android:name=".DashboardActivity"
+            android:name=".activities.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".NewAccountActivity"
+            android:name=".activities.NewAccountActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
