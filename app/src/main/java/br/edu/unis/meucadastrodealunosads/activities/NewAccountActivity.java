@@ -1,11 +1,13 @@
 package br.edu.unis.meucadastrodealunosads.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import java.util.List;
 
@@ -30,8 +32,16 @@ public class NewAccountActivity extends AppCompatActivity {
 
         AppDatabase db = AppDatabase.getInstance(getApplicationContext());
         UserDao userDao = db.userDao();
+        // TODO implements new account persistence
+    }
 
-
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
