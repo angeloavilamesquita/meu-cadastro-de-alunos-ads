@@ -2,13 +2,13 @@ package br.edu.unis.meucadastrodealunosads.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.edu.unis.meucadastrodealunosads.R;
-import br.edu.unis.meucadastrodealunosads.daos.AppDatabase;
-import br.edu.unis.meucadastrodealunosads.daos.UserDao;
+import br.edu.unis.meucadastrodealunosads.dao.AppDatabase;
+import br.edu.unis.meucadastrodealunosads.dao.UserDao;
 import br.edu.unis.meucadastrodealunosads.entities.User;
 
 public class LoginActivity extends AppCompatActivity {
@@ -88,10 +88,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean authenticate(String user, String password) {
         AppDatabase db = AppDatabase.getInstance(getApplicationContext());
-
         UserDao userDao = db.userDao();
-        User hasUser = userDao.authenticate(user, password);
 
-        return true;
+        User hasUser = userDao.authenticate(user, password);
+        Log.d("hasUSer", hasUser.username);
+        return hasUser != null;
     }
 }

@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import br.edu.unis.meucadastrodealunosads.R;
+import br.edu.unis.meucadastrodealunosads.dao.AppDatabase;
+import br.edu.unis.meucadastrodealunosads.dao.UserDao;
+import br.edu.unis.meucadastrodealunosads.entities.User;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -22,6 +26,13 @@ public class DashboardActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        AppDatabase db = AppDatabase.getInstance(getApplicationContext());
+        UserDao userDao = db.userDao();
+
+        for (User user: userDao.getAll()) {
+            Log.d("USERS_CREATED", user.uid + "-" + user.username);
+        }
     }
 
     @Override

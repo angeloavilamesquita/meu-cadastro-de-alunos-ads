@@ -4,16 +4,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "user")
 public class User {
 
-    @PrimaryKey
-    public int uid;
+    @PrimaryKey(autoGenerate = true)
+    public long uid;
 
-    @ColumnInfo
     public String username;
-
-    @ColumnInfo
     public String password;
 
 }

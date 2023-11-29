@@ -1,4 +1,4 @@
-package br.edu.unis.meucadastrodealunosads.daos;
+package br.edu.unis.meucadastrodealunosads.dao;
 
 import android.content.Context;
 
@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 import br.edu.unis.meucadastrodealunosads.entities.User;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
 
     private volatile static AppDatabase instance;
@@ -20,8 +20,9 @@ public abstract class AppDatabase extends RoomDatabase {
             return Room.databaseBuilder(
                     context,
                     AppDatabase.class,
-                    "cadastro-alunos"
+                    "cadastro-alunos.db"
             ).allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
             .build();
         }
         return instance;

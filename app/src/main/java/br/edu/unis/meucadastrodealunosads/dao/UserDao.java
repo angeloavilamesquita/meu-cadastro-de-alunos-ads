@@ -1,8 +1,10 @@
-package br.edu.unis.meucadastrodealunosads.daos;
+package br.edu.unis.meucadastrodealunosads.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -15,6 +17,9 @@ public interface UserDao {
     @Query("SELECT * FROM user")
     List<User> getAll();
 
+    @Query("SELECT * FROM user WHERE USERNAME = :username")
+    User findUsername(String username);
+
     @Query("SELECT * FROM user WHERE uid IN (:userIds)")
     List<User> loadAllByIds(int[] userIds);
 
@@ -22,8 +27,8 @@ public interface UserDao {
     + "AND password = :password")
     User authenticate(String username, String password);
 
-    @Insert
-    void insertAll(User... users);
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    void insertAll(User... user);
 
     @Delete
     void delete(User user);
